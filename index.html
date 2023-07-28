@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .sldbtn{
+            display: inline-block;
+            background-color: red;
+            border: 2px solid red;
+            color: white;
+            padding: 10px 5px;
+            text-decoration: none; 
+            transition: all 0.3s linear;
+            position: relative;
+        }
+
+        .sldbtn::after{
+            position: absolute;
+            content: "";
+            width: 30px;
+            height: 100%;
+            background-color: white;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            transition: all .3s linear;
+        }
+
+        .sldbtn span{
+            color: red;
+            padding: 5px;
+            margin-left: 10px;
+            z-index: 3;
+            position: relative;
+        }
+
+        .sldbtn:hover{
+            background-color: white;
+            color: red;
+        }
+
+        .sldbtn:hover::after{
+            width: 100%;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" class="sldbtn">Book Now <span><i class="fa-solid fa-arrow-right"></i></span></a>
+</body>
+</html>

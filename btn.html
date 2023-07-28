@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        a {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            width: 175px;
+            height: 45px;
+            line-height: 40px;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: white;
+            border: 8px solid red;
+            letter-spacing: 2px;
+            text-align: center;
+            position: relative;
+            transition: all .35s;
+            background: red;
+        }
+
+        a span {
+            position: relative;
+            z-index: 2;
+            margin-left: 10px;
+        }
+
+        a .right {
+            position: absolute;
+            right: 10px;
+            transition: all 0.2s linear;
+        }
+
+        a:hover .right {
+            right: -10px;
+            opacity: 0;
+        }
+
+        a .left{
+            position: absolute;
+            right: 30px;
+            opacity: 0;
+            transition: all 0.2s linear;
+        }        
+
+        a:hover .left {
+            right: 10px;
+            opacity: 1;
+        }
+
+        a i {
+            color: red;
+            transition: all 0.3s linear;
+        }
+
+        a:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 100%;
+            background: white;
+            transition: all .35s;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:hover:after {
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+            top: -3px;
+            right: -3px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">
+        <span>Hover Me!</span>
+        <span class="left"><i class="fa-solid fa-arrow-right"></i></span>
+        <span class="right"><i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+</body>
+
+</html>
